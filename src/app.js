@@ -29,3 +29,18 @@ totalPrice([
     { item: "cpu", quantity: 2, price: 1500 },
     { item: "gpu", quantity: 1, price: 800 },
 ]);
+
+// Create a function that takes an array and returns with the strings that have digits.
+// arr(["1A", "abc", "Az", "tscreen"]) ➞ ["1A", "Az", "tscreen"]
+
+function arr(arr) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].match(/\d/g)) {
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr;
+}
+
+console.log(arr(["1A", "abc", "Az", "tscreen"]));
